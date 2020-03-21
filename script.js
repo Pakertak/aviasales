@@ -238,7 +238,7 @@ formSearch.addEventListener('submit', (event) => {
         + `&destination=${formData.to.code}&one_way=true`;
 
             //response - ответ от сервера
-        getData(CALENDAR + requestData, (response) => {
+        getData(PROXY + CALENDAR + requestData, (response) => {
             renderCheap(response, formData.when);
         }, (error) => {
             alertMessage.innerHTML = '<h2>В этом направлении нет рейсов.</h2>';
